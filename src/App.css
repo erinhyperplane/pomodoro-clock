@@ -41,6 +41,16 @@ body{
   outline: none;
 }
 
+.control-btn{
+  border: none;
+  padding: none;
+  background-color: rgb(228, 105, 83);
+  color: rgb(92, 92, 92);
+  font-weight: 700;
+  font-size: 15px;
+  outline: none;
+}
+
 .timer-panel{
   margin: 30px;
   padding: 10px 50px 50px 50px;

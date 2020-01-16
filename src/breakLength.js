@@ -9,7 +9,13 @@ export default function BreakLengthUnit({breakLength, setBreakLength}){
             <div className="break-buttons">
                 <button 
                     className="break-btn"
-                    onClick={()=>setBreakLength(breakLength-1)}
+                    onClick={()=>{
+                        if(breakLength==1){
+                            return;
+                        }else{
+                            setBreakLength(breakLength-1)
+                        }
+                    }}
                 >
                     ↓
                 </button>

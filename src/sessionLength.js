@@ -10,7 +10,7 @@ export default function SessionLengthUnit({sessionLength, setSessionLength}){
                 <button 
                     className="break-btn"
                     onClick={()=>{
-                        if(sessionLength==1){
+                        if(sessionLength===1){
                             return;
                         }else{
                             setSessionLength(sessionLength-1)

@@ -3,8 +3,14 @@ import BreakLengthUnit from './breakLength';
 import SessionLengthUnit from './sessionLength';
 import ClockPanel from './clockPanel';
 
+import useInterval from 'react-useinterval';
 
 
+/* todos
+1. add timer count down
+2. add switch session
+3. add sound?
+*/
 
 
 import './App.css';
@@ -26,11 +32,25 @@ function App() {
     setTimer(25*60);
   }
 
-  
+
+  useInterval(()=> setTimer(time - 1), active?1000:null);
+
   useEffect(()=>{
     setTimer(sessionLength*60)
   },[sessionLength]);
 
+  useEffect(()=>{
+    if(time===0 && mode === 'session'){
+      setMode('break')
+      setTimer(breakLength*60)
+    }else if(time === 0 && mode === 'break'){
+      setMode('session')
+      setTimer(sessionLength*60)
+    }
+  },[time, sessionLength, breakLength, mode])
+
+ 
+  
 
   
   

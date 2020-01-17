@@ -33,6 +33,7 @@ export default function ClockPanel({currentMode, currentTime, activeStatus, hand
                         className="control-btn"
                         onClick={()=>{
                             setActive(!active)
+                            
                         }}
                     >
                         {active?<p>||</p>:<p>▶</p>}

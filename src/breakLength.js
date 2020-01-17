@@ -10,7 +10,7 @@ export default function BreakLengthUnit({breakLength, setBreakLength}){
                 <button 
                     className="break-btn"
                     onClick={()=>{
-                        if(breakLength==1){
+                        if(breakLength===1){
                             return;
                         }else{
                             setBreakLength(breakLength-1)

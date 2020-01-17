@@ -66,7 +66,8 @@ function App() {
       <ClockPanel currentMode={[mode,setMode]} currentTime={[time, setTimer]} activeStatus={[active,setActive]} handleReset={handleReset}  />
       
    
-      <footer>Designed by anonymous</footer>
+      <footer>Designed by ejxhyperplane</footer>
+      <p id="foot-note">*the idea of this project is inspired by FCC's react project.</p>
     </div>
   );
 }
